@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Modal from "react-modal";
+import React, { useEffect } from "react";
 import {
   BrowserView,
   MobileView,
@@ -11,16 +10,7 @@ import {
 
 import "./App.css";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
+
 const App = () => {
   useEffect(() => {
     if (isAndroid) {
@@ -43,6 +33,14 @@ const App = () => {
 
   return (
     <div className="App">
+      <BrowserView>
+        <h1>This is rendered only in browser</h1>
+      </BrowserView>
+      <MobileView>
+        <h1>This is rendered only on mobile</h1>
+      </MobileView>
+      <div>{isMobile && "mobiles"}</div>
+      <div>{isBrowser && "browsers"}</div>
       <div>
         If you have not been automatically redirected, click on the following
         link:
