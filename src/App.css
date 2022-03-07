@@ -6,15 +6,6 @@
   justify-content: center;
 }
 
-button {
-  margin: 2em 0 1em 0;
-  border: 0;
-  padding: 1em 2em;
-  border-radius: 0.5em;
-  cursor: pointer;
-  background-color: cornflowerblue;
-}
-
 a {
   margin: 1em 0;
 }
