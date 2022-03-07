@@ -12,26 +12,27 @@ import "./App.css";
 // window.location = 'geo:40.765819,-73.975866'
 
 const App = () => {
-  useEffect(() => {
-    // android
-    if (isAndroid) {
-      const url =
-        "intent://maps.google.com/#Intent;scheme=https;package=com.google.android.apps.maps;end";
-      window.location.replace(url);
-    }
-    // ios
-    else if (isIOS) {
-      window.location.replace("instagram://");
+  
+  // useEffect(() => {
+  //   // android
+  //   if (isAndroid) {
+  //     const url =
+  //       "intent://maps.google.com/#Intent;scheme=https;package=com.google.android.apps.maps;end";
+  //     window.location.replace(url);
+  //   }
+  //   // ios
+  //   else if (isIOS) {
+  //     window.location.replace("instagram://");
 
-      setTimeout(() => {
-        window.location.replace(
-          "https://apps.apple.com/us/app/instagram/id389801252"
-        );
-      }, 10000);
-    } else {
-      // window.location.replace("https://www.google.com/maps");
-    }
-  }, []);
+  //     setTimeout(() => {
+  //       window.location.replace(
+  //         "https://apps.apple.com/us/app/instagram/id389801252"
+  //       );
+  //     }, 10000);
+  //   } else {
+  //     // window.location.replace("https://www.google.com/maps");
+  //   }
+  // }, []);
 
   const mapsSelector = () => {
     if (isIOS)
