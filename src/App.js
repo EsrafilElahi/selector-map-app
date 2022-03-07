@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BrowserView,
   MobileView,
@@ -12,7 +12,7 @@ import "./App.css";
 // window.location = 'geo:40.765819,-73.975866'
 
 const App = () => {
-  
+
   // useEffect(() => {
   //   // android
   //   if (isAndroid) {
