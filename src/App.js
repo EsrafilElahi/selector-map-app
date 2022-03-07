@@ -14,7 +14,10 @@ const App = () => {
         href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic"
         target="_blank"
       >
-        open map
+        open map 1
+      </a>
+      <a href="comgooglemaps://?center=3.1357,101.6880&zoom=14" target="_blank">
+        open map 2
       </a>
     </div>
   );
