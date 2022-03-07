@@ -7,15 +7,18 @@ import {
   isAndroid,
   isIOS,
 } from "react-device-detect";
-
 import "./App.css";
 
+
+
+// window.location = 'geo:40.765819,-73.975866'
 
 const App = () => {
   useEffect(() => {
     if (isAndroid) {
       const url =
-        "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+        // "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+        "intent://maps.google.com/#Intent;scheme=https;package=com.google.android.apps.maps;end";
 
       window.location.replace(url);
     } else if (isIOS) {
@@ -31,6 +34,14 @@ const App = () => {
     }
   }, []);
 
+  const mapsSelector = () => {
+    if (isIOS)
+      window.open("maps://maps.google.com/maps?daddr=lat,long&amp;ll=");
+    else {
+      window.open("https://maps.google.com/maps?daddr=lat,long&amp;ll=");
+    }
+  };
+
   return (
     <div className="App">
       <BrowserView>
@@ -41,10 +52,8 @@ const App = () => {
       </MobileView>
       <div>{isMobile && "mobiles"}</div>
       <div>{isBrowser && "browsers"}</div>
-      <div>
-        If you have not been automatically redirected, click on the following
-        link:
-      </div>
+      <button onClick={mapsSelector}>open map</button>
+
       {isAndroid ? (
         <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
           Open Android app
