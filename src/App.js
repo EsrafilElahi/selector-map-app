@@ -4,26 +4,62 @@ import "./App.css";
 const App = () => {
   return (
     <div className="container">
-      <span>for android map</span>
+      <span>For Android Platform</span>
       <a href="geo:37.786971,-122.399677" target="_blank" rel="noreferrer">
-        open map
+        Open Map
       </a>
 
-      <span>for ios map</span>
+      <hr />
+
+      <span>For IOS platform</span>
       <a
-        href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic"
+        href="geo:37.786971,-122.399677;u=35"
         target="_blank"
         rel="noreferrer"
       >
-        open map 1
+        Open Map 1
       </a>
       <a
-        href="comgooglemaps://?center=3.1357,101.6880&zoom=14"
+        href="//maps.apple.com/?q=Raleigh,NC"
         target="_blank"
         rel="noreferrer"
       >
-        open map 2
+        Open Map 1 , 1
       </a>
+      <a
+        href="https://maps.apple.com/maps?q=addressgoeshere"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open Map 1 , 2
+      </a>      
+      <a
+        href="comgooglemaps-x-callback://?center=40.765819,-73.975866&zoom=14"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open Map 1 , 2
+      </a>
+      <a
+        href="comapplemaps://?center=3.1357,101.6880&zoom=14"
+        target="_blank"
+        rel="noreferrer"
+        className="a2"
+      >
+        Open Map 2
+      </a>
+
+      <hr />
+
+      <span>For Web Platform</span>
+      <a
+        href="https://www.google.com/maps/@35.7583817,51.4000924,14z"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open Map 2
+      </a>
+
     </div>
   );
 };

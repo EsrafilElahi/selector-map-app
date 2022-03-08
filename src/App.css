@@ -1,11 +1,36 @@
+*{
+  font-family: system-ui;
+}
+
 .container {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 2em;
+}
+
+span {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 a {
-  margin: 1em 0;
+  text-decoration: none;
+  color: #ff7700;
+  background-color: #d7afaf;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  margin: 2em 0;
+}
+
+.a2{
+  margin: 0 !important;
+  margin-bottom: 2em !important;
+}
+
+hr {
+  margin-bottom: 2em;
+  width: 100%;
 }
